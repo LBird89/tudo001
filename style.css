@@ -17,16 +17,33 @@ h1 { font-size: 1.6rem; margin: 0 0 5px; }
 button { font: inherit; cursor: pointer; }
 .form-row button { background: #2563eb; border: 0; color: white; border-radius: 7px; padding: 0 22px; font-weight: 700; }
 .form-row button:hover { background: #1d4ed8; }
+.deadline-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.deadline-row label { margin: 0; font-size: .9rem; font-weight: 500; }
+.deadline-row input, .todo-deadline-input { max-width: 100%; padding: 7px 9px; border: 1px solid #b9c5d3; border-radius: 6px; background: white; color: inherit; font: inherit; }
 .section-heading { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; border-bottom: 1px solid #e2e8f0; }
 h2 { font-size: 1.1rem; }
 #remaining-count { color: #64748b; font-size: .88rem; }
 .todo-list { list-style: none; padding: 0; margin: 10px 0; }
 .todo-item { display: flex; align-items: center; gap: 10px; padding: 12px 4px; border-bottom: 1px solid #e2e8f0; }
-.todo-item input[type="checkbox"] { width: 19px; height: 19px; cursor: pointer; }
-.todo-text { flex: 1; overflow-wrap: anywhere; }
+.todo-item > input[type="checkbox"] { width: 19px; height: 19px; flex-shrink: 0; cursor: pointer; }
+.todo-content { flex: 1; min-width: 0; }
+.todo-text { display: block; overflow-wrap: anywhere; }
 .todo-item.completed .todo-text { text-decoration: line-through; color: #94a3b8; }
-.delete-button { color: #b42318; background: white; border: 1px solid #f4b4b0; border-radius: 6px; padding: 6px 9px; }
+.todo-deadline-row { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin-top: 7px; }
+.todo-deadline-label { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: .78rem; color: #64748b; }
+.todo-deadline-input { width: 143px; padding: 5px 6px; font-size: .82rem; }
+.deadline-status { font-size: .78rem; color: #64748b; }
+.deadline-overdue { color: #b42318; font-weight: 700; }
+.deadline-today { color: #9a6700; font-weight: 700; }
+.todo-item.overdue { background: #fff4f4; border-radius: 6px; }
+.delete-button { color: #b42318; background: white; border: 1px solid #f4b4b0; border-radius: 6px; padding: 6px 9px; flex-shrink: 0; }
 .delete-button:hover { background: #fff1f2; }
 .empty-message { text-align: center; padding: 22px; color: #94a3b8; }
 footer { margin-top: 30px; font-size: .76rem; color: #64748b; }
-@media (max-width: 440px) { .app { padding: 19px; } .app-header { gap: 10px; } .app-icon { width: 56px; height: 56px; } h1 { font-size: 1.3rem; } .form-row button { padding: 0 14px; } }
+@media (max-width: 440px) {
+  .app { padding: 19px; }
+  .app-header { gap: 10px; }
+  .app-icon { width: 56px; height: 56px; }
+  h1 { font-size: 1.3rem; }
+  .form-row button { padding: 0 14px; }
+}
