@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>シンプルToDo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <img class="app-icon" src="images/notebook.svg" alt="ノートのイラスト">
+      <div>
+        <h1>シンプルToDo</h1>
+        <p>やることをメモして、終わったらチェック。</p>
+      </div>
+    </header>
+
+    <form id="todo-form" class="todo-form">
+      <label for="todo-input">新しいToDo</label>
+      <div class="form-row">
+        <input id="todo-input" type="text" placeholder="例：数学の課題を提出する" maxlength="100" required>
+        <button type="submit">追加</button>
+      </div>
+    </form>
+
+    <section class="todo-section" aria-labelledby="todo-heading">
+      <div class="section-heading">
+        <h2 id="todo-heading">ToDo一覧</h2>
+        <span id="remaining-count" aria-live="polite">残り 0 件</span>
+      </div>
+      <ul id="todo-list" class="todo-list"></ul>
+      <p id="empty-message" class="empty-message">まだToDoはありません。</p>
+    </section>
+
+    <footer>※ このアプリのデータは、使用しているブラウザに保存されます。</footer>
+  </main>
+</body>
+</html>

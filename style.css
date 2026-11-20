@@ -1,0 +1,32 @@
+/* 画面の見た目を決めるファイル */
+:root {
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  color: #263443;
+  background: #f1f5f9;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 36px 16px; }
+.app { max-width: 620px; margin: 0 auto; padding: 30px; background: white; border: 1px solid #e2e8f0; border-radius: 14px; box-shadow: 0 8px 28px #1e293b0d; }
+.app-header { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; }
+.app-icon { width: 70px; height: 70px; flex-shrink: 0; }
+h1 { font-size: 1.6rem; margin: 0 0 5px; }
+.app-header p { margin: 0; color: #64748b; font-size: .94rem; }
+.todo-form label { display: block; margin-bottom: 9px; font-weight: 700; }
+.form-row { display: flex; gap: 8px; }
+.form-row input { min-width: 0; flex: 1; padding: 12px; border-radius: 7px; border: 1px solid #b9c5d3; font: inherit; }
+button { font: inherit; cursor: pointer; }
+.form-row button { background: #2563eb; border: 0; color: white; border-radius: 7px; padding: 0 22px; font-weight: 700; }
+.form-row button:hover { background: #1d4ed8; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; border-bottom: 1px solid #e2e8f0; }
+h2 { font-size: 1.1rem; }
+#remaining-count { color: #64748b; font-size: .88rem; }
+.todo-list { list-style: none; padding: 0; margin: 10px 0; }
+.todo-item { display: flex; align-items: center; gap: 10px; padding: 12px 4px; border-bottom: 1px solid #e2e8f0; }
+.todo-item input[type="checkbox"] { width: 19px; height: 19px; cursor: pointer; }
+.todo-text { flex: 1; overflow-wrap: anywhere; }
+.todo-item.completed .todo-text { text-decoration: line-through; color: #94a3b8; }
+.delete-button { color: #b42318; background: white; border: 1px solid #f4b4b0; border-radius: 6px; padding: 6px 9px; }
+.delete-button:hover { background: #fff1f2; }
+.empty-message { text-align: center; padding: 22px; color: #94a3b8; }
+footer { margin-top: 30px; font-size: .76rem; color: #64748b; }
+@media (max-width: 440px) { .app { padding: 19px; } .app-header { gap: 10px; } .app-icon { width: 56px; height: 56px; } h1 { font-size: 1.3rem; } .form-row button { padding: 0 14px; } }
